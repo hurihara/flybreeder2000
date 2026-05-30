@@ -11,42 +11,43 @@
 body{background:#1a1a18;min-height:100vh;display:flex;justify-content:center;padding:20px;font-family:'DotGothic16',monospace;color:#e8e6dd}
 #g{width:100%;max-width:680px}
 h1{font-family:'Press Start 2P',monospace;font-size:11px;color:#97C459;margin-bottom:12px;letter-spacing:1px}
-.top-bar{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:10px}
+.top-bar{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
 .stat{background:#2c2c2a;border:0.5px solid #444441;border-radius:8px;padding:8px 10px}
 .stat-label{font-size:10px;color:#888780}
 .stat-val{font-size:20px;font-weight:500;color:#e8e6dd}
-.arena{position:relative;background:#222220;border:0.5px solid #444441;border-radius:12px;height:260px;overflow:hidden;margin-bottom:10px}
+.arena{position:relative;background:#222220;border:0.5px solid #444441;border-radius:12px;height:240px;overflow:hidden;margin-bottom:10px}
 .arena-bg{position:absolute;inset:0;opacity:0.05;background:repeating-linear-gradient(0deg,#639922 0,#639922 1px,transparent 1px,transparent 20px),repeating-linear-gradient(90deg,#639922 0,#639922 1px,transparent 1px,transparent 20px)}
-.fly-el{position:absolute;font-size:22px;cursor:pointer;transition:left 1s ease,top 1s ease;user-select:none;line-height:1;display:flex;flex-direction:column;align-items:center}
+.fly-el{position:absolute;font-size:20px;cursor:pointer;transition:left 1s ease,top 1s ease;user-select:none;line-height:1;display:flex;flex-direction:column;align-items:center}
 .fly-name{font-size:9px;color:#888780;background:#2c2c2a;border-radius:3px;padding:0 3px;margin-top:1px;white-space:nowrap}
-.hunger-bar-wrap{height:5px;background:#444441;border-radius:3px;margin-top:2px;width:100%}
-.hunger-bar{height:5px;border-radius:3px;transition:width 0.4s}
+.hunger-bar-wrap{height:4px;background:#444441;border-radius:3px;margin-top:2px;width:100%}
+.hunger-bar{height:4px;border-radius:3px;transition:width 0.4s}
+.sel-box{background:#2c2c2a;border:0.5px solid #444441;border-radius:8px;padding:10px 12px;margin-bottom:10px;font-size:12px;min-height:40px}
+.sel-info{color:#888780;line-height:1.7}
+.rename-area{margin-top:8px;border-top:0.5px solid #444441;padding-top:8px;display:none}
+.rename-area.visible{display:block}
+.rename-label{font-size:11px;color:#888780;margin-bottom:6px}
+.rename-row{display:flex;gap:6px}
+.rename-row input{font-family:'DotGothic16',monospace;font-size:14px;flex:1;padding:8px 10px;border:0.5px solid #5f5e5a;border-radius:8px;background:#1a1a18;color:#e8e6dd;-webkit-appearance:none;appearance:none}
+.rename-row input:focus{outline:none;border-color:#97C459}
+.rename-row button{font-family:'DotGothic16',monospace;font-size:13px;padding:8px 14px;border:0.5px solid #639922;border-radius:8px;background:#2c3820;color:#97C459;cursor:pointer;white-space:nowrap}
+.rename-row button:active{opacity:0.7}
 .panel{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
 .card{background:#2c2c2a;border:0.5px solid #444441;border-radius:12px;padding:10px 12px}
 .card h3{font-size:11px;color:#888780;margin-bottom:8px}
 .species-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
-.sp-btn{font-family:'DotGothic16',monospace;font-size:12px;padding:6px 8px;border:0.5px solid #5f5e5a;border-radius:8px;background:#1a1a18;color:#e8e6dd;cursor:pointer;text-align:left;transition:background 0.1s;line-height:1.4}
-.sp-btn:hover{background:#333331;border-color:#97C459}
+.sp-btn{font-family:'DotGothic16',monospace;font-size:12px;padding:6px 8px;border:0.5px solid #5f5e5a;border-radius:8px;background:#1a1a18;color:#e8e6dd;cursor:pointer;text-align:left;line-height:1.4;-webkit-tap-highlight-color:transparent}
+.sp-btn:active{background:#2c2c2a}
 .food-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
-.food-btn{font-family:'DotGothic16',monospace;font-size:12px;padding:6px 8px;border:0.5px solid #5f5e5a;border-radius:8px;background:#1a1a18;color:#e8e6dd;cursor:pointer;text-align:left;transition:background 0.1s;line-height:1.4}
-.food-btn:hover{background:#2c3820;border-color:#639922}
-.food-btn:active{transform:scale(0.97)}
-.sel-box{background:#2c2c2a;border:0.5px solid #444441;border-radius:8px;padding:8px 10px;margin-bottom:10px;font-size:12px;min-height:36px}
-.name-row{display:flex;gap:6px;align-items:center;margin-top:6px}
-.name-row input{font-family:'DotGothic16',monospace;font-size:12px;flex:1;padding:5px 8px;border:0.5px solid #5f5e5a;border-radius:6px;background:#1a1a18;color:#e8e6dd}
-.name-row button{font-family:'DotGothic16',monospace;font-size:12px;padding:5px 10px;border:0.5px solid #5f5e5a;border-radius:6px;background:#1a1a18;color:#e8e6dd;cursor:pointer;white-space:nowrap}
-.name-row button:hover{background:#2c3820;border-color:#639922}
+.food-btn{font-family:'DotGothic16',monospace;font-size:12px;padding:6px 8px;border:0.5px solid #5f5e5a;border-radius:8px;background:#1a1a18;color:#e8e6dd;cursor:pointer;text-align:left;line-height:1.4;-webkit-tap-highlight-color:transparent}
+.food-btn:active{background:#2c3820}
 .action-row{display:flex;gap:8px;margin-bottom:10px}
-.action-row button{font-family:'DotGothic16',monospace;font-size:13px;flex:1;padding:9px;border:0.5px solid #5f5e5a;border-radius:8px;background:#1a1a18;color:#e8e6dd;cursor:pointer;transition:background 0.1s,transform 0.1s}
-.action-row button:hover{background:#2c2c2a}
-.action-row button:active{transform:scale(0.97)}
+.action-row button{font-family:'DotGothic16',monospace;font-size:13px;flex:1;padding:10px 6px;border:0.5px solid #5f5e5a;border-radius:8px;background:#1a1a18;color:#e8e6dd;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.action-row button:active{background:#2c2c2a}
 .action-row button:disabled{opacity:0.35;cursor:not-allowed}
 .save-row{display:flex;gap:8px;margin-bottom:10px;align-items:center}
-.save-row button{font-family:'DotGothic16',monospace;font-size:12px;padding:7px 12px;border:0.5px solid #5f5e5a;border-radius:8px;background:#1a1a18;color:#e8e6dd;cursor:pointer;transition:background 0.1s}
-.save-row button:hover{background:#2c2c2a}
-.save-row button.save-btn:hover{background:#2c3820;border-color:#639922}
-.save-row button.load-btn:hover{background:#222c3a;border-color:#378ADD}
-.save-row button.danger:hover{background:#3a2222;border-color:#E24B4A}
+.save-row button{font-family:'DotGothic16',monospace;font-size:12px;padding:7px 12px;border:0.5px solid #5f5e5a;border-radius:8px;background:#1a1a18;color:#e8e6dd;cursor:pointer}
+.save-row button.save-btn{border-color:#639922;color:#97C459}
+.save-row button.load-btn{border-color:#378ADD;color:#7AB8EF}
 .save-status{font-size:11px;color:#888780;flex:1;text-align:right}
 .log-box{background:#222220;border:0.5px solid #444441;border-radius:8px;padding:8px 10px;height:72px;overflow-y:auto;font-size:12px;color:#888780}
 .log-entry{margin-bottom:2px}
@@ -60,15 +61,19 @@ h1{font-family:'Press Start 2P',monospace;font-size:11px;color:#97C459;margin-bo
 <div class="top-bar">
   <div class="stat"><div class="stat-label">飼育数</div><div class="stat-val" id="s-count">0</div></div>
   <div class="stat"><div class="stat-label">世代</div><div class="stat-val" id="s-gen">1</div></div>
-  <div class="stat"><div class="stat-label">総育成数</div><div class="stat-val" id="s-total">0</div></div>
 </div>
 
-<div class="arena" id="arena">
-  <div class="arena-bg"></div>
-</div>
+<div class="arena" id="arena"><div class="arena-bg"></div></div>
 
-<div class="sel-box" id="sel-box">
-  <div id="sel-info" style="color:#888780">← ハエをクリックして選択</div>
+<div class="sel-box">
+  <div class="sel-info" id="sel-info">← ハエをタップして選択</div>
+  <div class="rename-area" id="rename-area">
+    <div class="rename-label" id="rename-label">名前を変更</div>
+    <div class="rename-row">
+      <input type="text" id="nickname-input" maxlength="12" placeholder="新しい名前" autocomplete="off" autocorrect="off" spellcheck="false">
+      <button id="nickname-btn">✏️ 決定</button>
+    </div>
+  </div>
 </div>
 
 <div class="panel">
@@ -77,15 +82,15 @@ h1{font-family:'Press Start 2P',monospace;font-size:11px;color:#97C459;margin-bo
     <div class="species-grid" id="species-grid"></div>
   </div>
   <div class="card">
-    <h3>🍽 選択中のハエに餌やり</h3>
+    <h3>🍽 選択中に餌やり</h3>
     <div class="food-grid" id="food-grid"></div>
   </div>
 </div>
 
 <div class="action-row">
-  <button id="btn-breed" disabled>💞 交配（2匹選択）</button>
-  <button id="btn-remove">選択解除</button>
-  <button id="btn-reset" class="danger">🔄 全リセット</button>
+  <button id="btn-breed" disabled>💞 交配</button>
+  <button id="btn-remove">解除</button>
+  <button id="btn-reset">🔄 リセット</button>
 </div>
 
 <div class="save-row">
@@ -108,9 +113,9 @@ const SPECIES=[
 ];
 const FOODS=[
   {id:'sugar',name:'砂糖水',emoji:'🍬',fill:30,label:'甘い'},
-  {id:'meat',name:'腐肉',emoji:'🥩',fill:70,label:'最高'},
+  {id:'honey',name:'はちみつ',emoji:'🍯',fill:70,label:'濃厚'},
   {id:'fruit',name:'果物',emoji:'🍑',fill:40,label:'甘酸'},
-  {id:'poop',name:'フン',emoji:'💩',fill:60,label:'本命'},
+  {id:'sashimi',name:'お刺身',emoji:'🍣',fill:60,label:'新鮮'},
   {id:'rice',name:'ご飯粒',emoji:'🍚',fill:25,label:'普通'},
   {id:'fish',name:'魚の骨',emoji:'🐟',fill:50,label:'臭い'},
 ];
@@ -128,68 +133,57 @@ function makeFly(speciesId){
     x:10+Math.random()*75,y:10+Math.random()*75,
     vx:(Math.random()-0.5)*2,vy:(Math.random()-0.5)*2,sp};
 }
-
 function displayName(f){return f.nickname||f.defaultName}
 
 function addFly(speciesId){
   if(state.flies.length>=20){log('飼育上限は20匹！');return;}
   const f=makeFly(speciesId);
-  state.flies.push(f);
-  state.total++;
+  state.flies.push(f);state.total++;
   renderFly(f);
-  log('✨ '+displayName(f)+'（'+SPECIES.find(s=>s.id===speciesId).desc+'）を追加！');
+  log('✨ '+displayName(f)+'（'+SPECIES.find(s=>s.id===speciesId).desc+'）追加！');
   updateUI();
 }
 
 function renderFly(f){
   const el=document.createElement('div');
-  el.className='fly-el';
-  el.id='fly-'+f.id;
-  el.style.left=f.x+'%';
-  el.style.top=f.y+'%';
+  el.className='fly-el';el.id='fly-'+f.id;
+  el.style.left=f.x+'%';el.style.top=f.y+'%';
   if(f.sleepy)el.style.opacity='0.6';
-  el.innerHTML=`<span class="fly-emoji-icon">${f.sleepy?'💤':f.emoji}</span><span class="fly-name" id="fname-${f.id}">${displayName(f)}</span><div class="hunger-bar-wrap"><div class="hunger-bar" id="hbar-${f.id}" style="width:${f.hunger}%;background:${f.hunger>80?'#E24B4A':f.hunger>50?'#EF9F27':'#97C459'}"></div></div>`;
+  el.innerHTML=`<span class="fly-icon">${f.sleepy?'💤':f.emoji}</span><span class="fly-name" id="fname-${f.id}">${displayName(f)}</span><div class="hunger-bar-wrap"><div class="hunger-bar" id="hbar-${f.id}" style="width:${f.hunger}%;background:#97C459"></div></div>`;
   if(state.selected.includes(f.id)){el.style.outline='2px solid #97C459';el.style.borderRadius='4px';}
-  el.addEventListener('click',()=>selectFly(f.id));
+  el.addEventListener('pointerdown',e=>{e.stopPropagation();selectFly(f.id);});
   arena.appendChild(el);
 }
 
 function getFlyEl(id){return document.getElementById('fly-'+id)}
 
 function selectFly(id){
-  const f=state.flies.find(f=>f.id===id);
-  if(!f)return;
+  const f=state.flies.find(f=>f.id===id);if(!f)return;
   const idx=state.selected.indexOf(id);
   if(idx>=0){
     state.selected.splice(idx,1);
-    const el=getFlyEl(id);
-    if(el){el.style.outline='';el.style.borderRadius='';}
+    const el=getFlyEl(id);if(el){el.style.outline='';el.style.borderRadius='';}
   } else {
     if(state.selected.length>=2){
       const old=state.selected.shift();
-      const oel=getFlyEl(old);
-      if(oel){oel.style.outline='';oel.style.borderRadius='';}
+      const oel=getFlyEl(old);if(oel){oel.style.outline='';oel.style.borderRadius='';}
     }
     state.selected.push(id);
-    const el=getFlyEl(id);
-    if(el){el.style.outline='2px solid #97C459';el.style.borderRadius='4px';}
+    const el=getFlyEl(id);if(el){el.style.outline='2px solid #97C459';el.style.borderRadius='4px';}
   }
-  updateSelInfo();
-  updateUI();
+  updateSelInfo();updateUI();
 }
 
 function updateSelInfo(){
   const infoDiv=document.getElementById('sel-info');
-  const selBox=document.getElementById('sel-box');
-  selBox.querySelectorAll('.name-row').forEach(el=>el.remove());
+  const renameArea=document.getElementById('rename-area');
   if(state.selected.length===0){
-    infoDiv.innerHTML='← ハエをクリックして選択';
+    infoDiv.innerHTML='← ハエをタップして選択';
     infoDiv.style.color='#888780';
-    return;
+    renameArea.classList.remove('visible');return;
   }
   const lines=state.selected.map(id=>{
-    const f=state.flies.find(f=>f.id===id);
-    if(!f)return '';
+    const f=state.flies.find(f=>f.id===id);if(!f)return '';
     const hpct=f.hunger;
     const hcol=hpct>80?'#E24B4A':hpct>50?'#EF9F27':'#97C459';
     const status=f.sleepy?'💤 熟睡中':(hpct>80?'😵 満腹':hpct>50?'😋 食べ中':'😐 空腹');
@@ -200,40 +194,42 @@ function updateSelInfo(){
   const lastId=state.selected[state.selected.length-1];
   const lastFly=state.flies.find(f=>f.id===lastId);
   if(lastFly){
-    const row=document.createElement('div');
-    row.className='name-row';
-    row.innerHTML=`<input id="nickname-input" type="text" maxlength="12" placeholder="名前をつける（${lastFly.emoji}）" value="${lastFly.nickname||''}"><button id="nickname-btn">✏️ 決定</button>`;
-    selBox.appendChild(row);
-    document.getElementById('nickname-btn').addEventListener('click',()=>{
-      const val=document.getElementById('nickname-input').value.trim();
-      if(val){
-        const old=displayName(lastFly);
-        lastFly.nickname=val;
-        const nameEl=document.getElementById('fname-'+lastFly.id);
-        if(nameEl)nameEl.textContent=val;
-        log('✏️ '+old+' → 「'+val+'」に改名！');
-        updateSelInfo();
-      }
-    });
-    document.getElementById('nickname-input').addEventListener('keydown',e=>{
-      if(e.key==='Enter')document.getElementById('nickname-btn').click();
-    });
+    document.getElementById('rename-label').textContent=lastFly.emoji+' '+displayName(lastFly)+' の名前を変更';
+    const inp=document.getElementById('nickname-input');
+    inp.value=lastFly.nickname||'';
+    renameArea.classList.add('visible');
   }
 }
+
+document.getElementById('nickname-btn').addEventListener('click',()=>{
+  if(state.selected.length===0)return;
+  const lastId=state.selected[state.selected.length-1];
+  const lastFly=state.flies.find(f=>f.id===lastId);if(!lastFly)return;
+  const val=document.getElementById('nickname-input').value.trim();
+  if(!val){log('名前を入力してね！');return;}
+  const old=displayName(lastFly);
+  lastFly.nickname=val;
+  const nameEl=document.getElementById('fname-'+lastFly.id);
+  if(nameEl)nameEl.textContent=val;
+  log('✏️ '+old+' → 「'+val+'」に改名！');
+  document.getElementById('nickname-input').blur();
+  updateSelInfo();
+});
+document.getElementById('nickname-input').addEventListener('keydown',e=>{
+  if(e.key==='Enter'){e.preventDefault();document.getElementById('nickname-btn').click();}
+});
 
 function feedFly(food){
   if(state.selected.length===0){log('先にハエを選択してね！');return;}
   state.selected.forEach(id=>{
-    const f=state.flies.find(f=>f.id===id);
-    if(!f)return;
+    const f=state.flies.find(f=>f.id===id);if(!f)return;
     if(f.sleepy){log(displayName(f)+'は寝てて食べられない…');return;}
     const before=f.hunger;
     f.hunger=Math.min(100,f.hunger+food.fill*f.sp.hungry*0.8);
     if(f.hunger>=100){
       f.hunger=100;f.sleepy=true;
       log('😴 '+displayName(f)+'、お腹いっぱいで寝落ち！');
-      const el=getFlyEl(id);
-      if(el){el.querySelector('.fly-emoji-icon').textContent='💤';el.style.opacity='0.6';}
+      const el=getFlyEl(id);if(el){el.querySelector('.fly-icon').textContent='💤';el.style.opacity='0.6';}
     } else {
       log(f.emoji+' '+displayName(f)+'に'+food.emoji+food.name+'！ ('+Math.round(before)+'→'+Math.round(f.hunger)+'%)');
     }
@@ -246,45 +242,30 @@ function feedFly(food){
 function breedFlies(){
   if(state.selected.length<2)return;
   const [id1,id2]=state.selected;
-  const f1=state.flies.find(f=>f.id===id1);
-  const f2=state.flies.find(f=>f.id===id2);
+  const f1=state.flies.find(f=>f.id===id1),f2=state.flies.find(f=>f.id===id2);
   if(!f1||!f2)return;
-  if(f1.sleepy||f2.sleepy){log('寝てる子は交配できない…起きるまで待って！');return;}
+  if(f1.sleepy||f2.sleepy){log('寝てる子は交配できない…');return;}
   state.gen++;
-  const childSpecies=Math.random()<0.5?f1.speciesId:f2.speciesId;
-  const child=makeFly(childSpecies);
+  const child=makeFly(Math.random()<0.5?f1.speciesId:f2.speciesId);
   child.defaultName=child.defaultName.replace('#','G'+state.gen+'#');
-  state.flies.push(child);
-  state.total++;
+  state.flies.push(child);state.total++;
   renderFly(child);
   state.selected.forEach(id=>{const el=getFlyEl(id);if(el){el.style.outline='';el.style.borderRadius='';}});
   state.selected.length=0;
-  log('💞 '+displayName(f1)+'×'+displayName(f2)+'→'+child.emoji+displayName(child)+' 誕生！（第'+state.gen+'世代）');
-  updateSelInfo();
-  updateUI();
+  log('💞 '+displayName(f1)+'×'+displayName(f2)+'→'+child.emoji+displayName(child)+' 誕生！第'+state.gen+'世代');
+  updateSelInfo();updateUI();
 }
 
-// ===== セーブ / ロード =====
 function saveGame(){
-  const data={
-    version:1,
-    gen:state.gen,
-    nextId:state.nextId,
-    total:state.total,
+  const data={version:1,gen:state.gen,nextId:state.nextId,total:state.total,
     savedAt:new Date().toLocaleString('ja-JP'),
-    flies:state.flies.map(f=>({
-      id:f.id,nickname:f.nickname,speciesId:f.speciesId,
-      defaultName:f.defaultName,hunger:f.hunger,sleepy:f.sleepy,age:f.age,
-      x:f.x,y:f.y
-    }))
-  };
+    flies:state.flies.map(f=>({id:f.id,nickname:f.nickname,speciesId:f.speciesId,
+      defaultName:f.defaultName,hunger:f.hunger,sleepy:f.sleepy,age:f.age,x:f.x,y:f.y}))};
   try{
     localStorage.setItem(SAVE_KEY,JSON.stringify(data));
     document.getElementById('save-status').textContent='💾 '+data.savedAt+' にセーブ済み';
     log('💾 セーブしました！（'+state.flies.length+'匹）');
-  }catch(e){
-    log('⚠️ セーブ失敗：'+e.message);
-  }
+  }catch(e){log('⚠️ セーブ失敗：'+e.message);}
 }
 
 function loadGame(){
@@ -292,45 +273,29 @@ function loadGame(){
     const raw=localStorage.getItem(SAVE_KEY);
     if(!raw){log('📂 セーブデータがないよ！');return;}
     const data=JSON.parse(raw);
-    // 全クリア
     state.flies.forEach(f=>{const el=getFlyEl(f.id);if(el)el.remove();});
     state.flies.length=0;state.selected.length=0;
-    state.gen=data.gen||1;
-    state.nextId=data.nextId||1;
-    state.total=data.total||0;
-    // ハエを復元
+    state.gen=data.gen||1;state.nextId=data.nextId||1;state.total=data.total||0;
     data.flies.forEach(fd=>{
-      const sp=SPECIES.find(s=>s.id===fd.speciesId);
-      if(!sp)return;
-      const f={
-        id:fd.id,nickname:fd.nickname,speciesId:fd.speciesId,
-        emoji:sp.emoji,defaultName:fd.defaultName,
-        hunger:fd.hunger,sleepy:fd.sleepy,age:fd.age,
-        x:fd.x,y:fd.y,
-        vx:(Math.random()-0.5)*2,vy:(Math.random()-0.5)*2,
-        sp
-      };
-      state.flies.push(f);
-      renderFly(f);
+      const sp=SPECIES.find(s=>s.id===fd.speciesId);if(!sp)return;
+      const f={id:fd.id,nickname:fd.nickname,speciesId:fd.speciesId,emoji:sp.emoji,
+        defaultName:fd.defaultName,hunger:fd.hunger,sleepy:fd.sleepy,age:fd.age,
+        x:fd.x,y:fd.y,vx:(Math.random()-0.5)*2,vy:(Math.random()-0.5)*2,sp};
+      state.flies.push(f);renderFly(f);
     });
     document.getElementById('save-status').textContent='📂 '+data.savedAt+' のデータをロード';
-    document.getElementById('sel-info').innerHTML='← ハエをクリックして選択';
-    document.getElementById('sel-box').querySelectorAll('.name-row').forEach(el=>el.remove());
+    document.getElementById('sel-info').innerHTML='← ハエをタップして選択';
+    document.getElementById('rename-area').classList.remove('visible');
     log('📂 ロード完了！（'+state.flies.length+'匹、第'+state.gen+'世代）');
     updateUI();
-  }catch(e){
-    log('⚠️ ロード失敗：'+e.message);
-  }
+  }catch(e){log('⚠️ ロード失敗：'+e.message);}
 }
 
 function checkSaveExists(){
-  try{
-    const raw=localStorage.getItem(SAVE_KEY);
-    if(raw){
-      const data=JSON.parse(raw);
-      document.getElementById('save-status').textContent='💾 '+data.savedAt+' のデータあり';
-    }
-  }catch(e){}
+  try{const raw=localStorage.getItem(SAVE_KEY);
+    if(raw){const data=JSON.parse(raw);
+      document.getElementById('save-status').textContent='💾 '+data.savedAt+' のデータあり';}}
+  catch(e){}
 }
 
 function tick(){
@@ -341,22 +306,18 @@ function tick(){
       if(f.hunger<=40){
         f.sleepy=false;
         const el=getFlyEl(f.id);
-        if(el){el.querySelector('.fly-emoji-icon').textContent=f.emoji;el.style.opacity='1';}
-        log('☀️ '+displayName(f)+' 起きた！（腹'+Math.round(f.hunger)+'%）');
+        if(el){el.querySelector('.fly-icon').textContent=f.emoji;el.style.opacity='1';}
+        log('☀️ '+displayName(f)+' 起きた！');
       }
       return;
     }
     f.hunger=Math.max(0,f.hunger-0.5*f.sp.hungry);
     const sp=f.sp.speed;
-    f.vx+=(Math.random()-0.5)*0.5*sp;
-    f.vy+=(Math.random()-0.5)*0.5*sp;
-    f.vx=Math.max(-3*sp,Math.min(3*sp,f.vx));
-    f.vy=Math.max(-3*sp,Math.min(3*sp,f.vy));
+    f.vx+=(Math.random()-0.5)*0.5*sp;f.vy+=(Math.random()-0.5)*0.5*sp;
+    f.vx=Math.max(-3*sp,Math.min(3*sp,f.vx));f.vy=Math.max(-3*sp,Math.min(3*sp,f.vy));
     f.x+=f.vx*sp;f.y+=f.vy*sp;
-    if(f.x<2){f.x=2;f.vx=Math.abs(f.vx);}
-    if(f.x>90){f.x=90;f.vx=-Math.abs(f.vx);}
-    if(f.y<2){f.y=2;f.vy=Math.abs(f.vy);}
-    if(f.y>85){f.y=85;f.vy=-Math.abs(f.vy);}
+    if(f.x<2){f.x=2;f.vx=Math.abs(f.vx);}if(f.x>90){f.x=90;f.vx=-Math.abs(f.vx);}
+    if(f.y<2){f.y=2;f.vy=Math.abs(f.vy);}if(f.y>85){f.y=85;f.vy=-Math.abs(f.vy);}
     const el=getFlyEl(f.id);
     if(el){
       el.style.left=f.x+'%';el.style.top=f.y+'%';
@@ -370,33 +331,26 @@ function tick(){
 function updateUI(){
   document.getElementById('s-count').textContent=state.flies.length;
   document.getElementById('s-gen').textContent=state.gen;
-  document.getElementById('s-total').textContent=state.total;
   document.getElementById('btn-breed').disabled=state.selected.length<2;
 }
 
 function log(msg){
-  const d=document.createElement('div');
-  d.className='log-entry';
-  d.textContent='▶ '+msg;
+  const d=document.createElement('div');d.className='log-entry';d.textContent='▶ '+msg;
   document.getElementById('log').prepend(d);
   if(document.getElementById('log').children.length>60)document.getElementById('log').lastChild.remove();
 }
 
 const sg=document.getElementById('species-grid');
 SPECIES.forEach(sp=>{
-  const b=document.createElement('button');
-  b.className='sp-btn';
+  const b=document.createElement('button');b.className='sp-btn';
   b.innerHTML=sp.emoji+' '+sp.name+'<br><span style="font-size:10px;color:#5f5e5a">'+sp.desc+'</span>';
-  b.addEventListener('click',()=>addFly(sp.id));
-  sg.appendChild(b);
+  b.addEventListener('click',()=>addFly(sp.id));sg.appendChild(b);
 });
 const fg=document.getElementById('food-grid');
 FOODS.forEach(food=>{
-  const b=document.createElement('button');
-  b.className='food-btn';
+  const b=document.createElement('button');b.className='food-btn';
   b.innerHTML=food.emoji+' '+food.name+' <span style="font-size:10px;color:#5f5e5a">'+food.label+'</span>';
-  b.addEventListener('click',()=>feedFly(food));
-  fg.appendChild(b);
+  b.addEventListener('click',()=>feedFly(food));fg.appendChild(b);
 });
 
 document.getElementById('btn-breed').addEventListener('click',breedFlies);
@@ -404,22 +358,21 @@ document.getElementById('btn-save').addEventListener('click',saveGame);
 document.getElementById('btn-load').addEventListener('click',loadGame);
 document.getElementById('btn-remove').addEventListener('click',()=>{
   state.selected.forEach(id=>{const el=getFlyEl(id);if(el){el.style.outline='';el.style.borderRadius='';}});
-  state.selected.length=0;
-  updateSelInfo();updateUI();
+  state.selected.length=0;updateSelInfo();updateUI();
 });
 document.getElementById('btn-reset').addEventListener('click',()=>{
-  if(!confirm('全リセットしていいですか？セーブデータは残ります。'))return;
+  if(!confirm('全リセットしていいですか？'))return;
   state.flies.forEach(f=>{const el=getFlyEl(f.id);if(el)el.remove();});
   state.flies.length=0;state.selected.length=0;state.nextId=1;state.gen=1;state.total=0;
-  document.getElementById('sel-info').innerHTML='← ハエをクリックして選択';
-  document.getElementById('sel-box').querySelectorAll('.name-row').forEach(el=>el.remove());
+  document.getElementById('sel-info').innerHTML='← ハエをタップして選択';
+  document.getElementById('rename-area').classList.remove('visible');
   log('🔄 リセット！');updateUI();
 });
 
 setInterval(tick,120);
 checkSaveExists();
 log('🪰 ようこそ！種類を選んでハエを追加しよう！');
-log('💡 💾セーブ → 📂ロード でハエが復活するよ！');
+log('💡 ハエをタップ→下の欄で名前をつけられるよ！');
 updateUI();
 </script>
 </body>
