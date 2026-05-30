@@ -15,9 +15,9 @@ h1{font-family:'Press Start 2P',monospace;font-size:11px;color:#97C459;margin-bo
 .stat{background:#2c2c2a;border:0.5px solid #444441;border-radius:8px;padding:8px 10px}
 .stat-label{font-size:10px;color:#888780}
 .stat-val{font-size:20px;font-weight:500;color:#e8e6dd}
-.arena{position:relative;background:#222220;border:0.5px solid #444441;border-radius:12px;height:240px;overflow:hidden;margin-bottom:10px}
+.arena{position:relative;background:#222220;border:0.5px solid #444441;border-radius:12px;height:240px;overflow:hidden;margin-bottom:10px;touch-action:none}
 .arena-bg{position:absolute;inset:0;opacity:0.05;background:repeating-linear-gradient(0deg,#639922 0,#639922 1px,transparent 1px,transparent 20px),repeating-linear-gradient(90deg,#639922 0,#639922 1px,transparent 1px,transparent 20px)}
-.fly-el{position:absolute;font-size:20px;cursor:pointer;transition:left 1s ease,top 1s ease;user-select:none;line-height:1;display:flex;flex-direction:column;align-items:center}
+.fly-el{position:absolute;font-size:20px;cursor:pointer;transition:left 1s ease,top 1s ease;user-select:none;line-height:1;display:flex;flex-direction:column;align-items:center;touch-action:none}
 .fly-name{font-size:9px;color:#888780;background:#2c2c2a;border-radius:3px;padding:0 3px;margin-top:1px;white-space:nowrap}
 .hunger-bar-wrap{height:4px;background:#444441;border-radius:3px;margin-top:2px;width:100%}
 .hunger-bar{height:4px;border-radius:3px;transition:width 0.4s}
@@ -27,25 +27,23 @@ h1{font-family:'Press Start 2P',monospace;font-size:11px;color:#97C459;margin-bo
 .rename-area.visible{display:block}
 .rename-label{font-size:11px;color:#888780;margin-bottom:6px}
 .rename-row{display:flex;gap:6px}
-.rename-row input{font-family:'DotGothic16',monospace;font-size:14px;flex:1;padding:8px 10px;border:0.5px solid #5f5e5a;border-radius:8px;background:#1a1a18;color:#e8e6dd;-webkit-appearance:none;appearance:none}
-.rename-row input:focus{outline:none;border-color:#97C459}
-.rename-row button{font-family:'DotGothic16',monospace;font-size:13px;padding:8px 14px;border:0.5px solid #639922;border-radius:8px;background:#2c3820;color:#97C459;cursor:pointer;white-space:nowrap}
+.rename-row input{font-family:'DotGothic16',monospace;font-size:16px;flex:1;padding:10px 12px;border:1.5px solid #5f5e5a;border-radius:8px;background:#1a1a18;color:#e8e6dd;-webkit-appearance:none;appearance:none;touch-action:auto;pointer-events:auto;position:relative;z-index:10}
+.rename-row input:focus{outline:none;border-color:#97C459;box-shadow:0 0 0 2px #63992233}
+.rename-row button{font-family:'DotGothic16',monospace;font-size:13px;padding:10px 14px;border:0.5px solid #639922;border-radius:8px;background:#2c3820;color:#97C459;cursor:pointer;white-space:nowrap;touch-action:auto;pointer-events:auto;-webkit-tap-highlight-color:transparent}
 .rename-row button:active{opacity:0.7}
 .panel{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
 .card{background:#2c2c2a;border:0.5px solid #444441;border-radius:12px;padding:10px 12px}
 .card h3{font-size:11px;color:#888780;margin-bottom:8px}
-.species-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
-.sp-btn{font-family:'DotGothic16',monospace;font-size:12px;padding:6px 8px;border:0.5px solid #5f5e5a;border-radius:8px;background:#1a1a18;color:#e8e6dd;cursor:pointer;text-align:left;line-height:1.4;-webkit-tap-highlight-color:transparent}
+.species-grid,.food-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.sp-btn,.food-btn{font-family:'DotGothic16',monospace;font-size:12px;padding:6px 8px;border:0.5px solid #5f5e5a;border-radius:8px;background:#1a1a18;color:#e8e6dd;cursor:pointer;text-align:left;line-height:1.4;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 .sp-btn:active{background:#2c2c2a}
-.food-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
-.food-btn{font-family:'DotGothic16',monospace;font-size:12px;padding:6px 8px;border:0.5px solid #5f5e5a;border-radius:8px;background:#1a1a18;color:#e8e6dd;cursor:pointer;text-align:left;line-height:1.4;-webkit-tap-highlight-color:transparent}
 .food-btn:active{background:#2c3820}
 .action-row{display:flex;gap:8px;margin-bottom:10px}
-.action-row button{font-family:'DotGothic16',monospace;font-size:13px;flex:1;padding:10px 6px;border:0.5px solid #5f5e5a;border-radius:8px;background:#1a1a18;color:#e8e6dd;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.action-row button{font-family:'DotGothic16',monospace;font-size:13px;flex:1;padding:10px 6px;border:0.5px solid #5f5e5a;border-radius:8px;background:#1a1a18;color:#e8e6dd;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 .action-row button:active{background:#2c2c2a}
 .action-row button:disabled{opacity:0.35;cursor:not-allowed}
 .save-row{display:flex;gap:8px;margin-bottom:10px;align-items:center}
-.save-row button{font-family:'DotGothic16',monospace;font-size:12px;padding:7px 12px;border:0.5px solid #5f5e5a;border-radius:8px;background:#1a1a18;color:#e8e6dd;cursor:pointer}
+.save-row button{font-family:'DotGothic16',monospace;font-size:12px;padding:7px 12px;border:0.5px solid #5f5e5a;border-radius:8px;background:#1a1a18;color:#e8e6dd;cursor:pointer;touch-action:manipulation}
 .save-row button.save-btn{border-color:#639922;color:#97C459}
 .save-row button.load-btn{border-color:#378ADD;color:#7AB8EF}
 .save-status{font-size:11px;color:#888780;flex:1;text-align:right}
@@ -57,48 +55,35 @@ h1{font-family:'Press Start 2P',monospace;font-size:11px;color:#97C459;margin-bo
 <body>
 <div id="g">
 <h1>🪰 FLY BREEDER 2000</h1>
-
 <div class="top-bar">
   <div class="stat"><div class="stat-label">飼育数</div><div class="stat-val" id="s-count">0</div></div>
   <div class="stat"><div class="stat-label">世代</div><div class="stat-val" id="s-gen">1</div></div>
 </div>
-
 <div class="arena" id="arena"><div class="arena-bg"></div></div>
-
-<div class="sel-box">
+<div class="sel-box" id="sel-box">
   <div class="sel-info" id="sel-info">← ハエをタップして選択</div>
   <div class="rename-area" id="rename-area">
     <div class="rename-label" id="rename-label">名前を変更</div>
     <div class="rename-row">
-      <input type="text" id="nickname-input" maxlength="12" placeholder="新しい名前" autocomplete="off" autocorrect="off" spellcheck="false">
-      <button id="nickname-btn">✏️ 決定</button>
+      <input type="text" id="nickname-input" maxlength="12" placeholder="新しい名前" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+      <button id="nickname-btn" type="button">✏️ 決定</button>
     </div>
   </div>
 </div>
-
 <div class="panel">
-  <div class="card">
-    <h3>🔬 種類を選んで追加</h3>
-    <div class="species-grid" id="species-grid"></div>
-  </div>
-  <div class="card">
-    <h3>🍽 選択中に餌やり</h3>
-    <div class="food-grid" id="food-grid"></div>
-  </div>
+  <div class="card"><h3>🔬 種類を選んで追加</h3><div class="species-grid" id="species-grid"></div></div>
+  <div class="card"><h3>🍽 選択中に餌やり</h3><div class="food-grid" id="food-grid"></div></div>
 </div>
-
 <div class="action-row">
   <button id="btn-breed" disabled>💞 交配</button>
   <button id="btn-remove">解除</button>
   <button id="btn-reset">🔄 リセット</button>
 </div>
-
 <div class="save-row">
   <button class="save-btn" id="btn-save">💾 セーブ</button>
   <button class="load-btn" id="btn-load">📂 ロード</button>
   <span class="save-status" id="save-status">セーブデータなし</span>
 </div>
-
 <div class="log-box" id="log"></div>
 </div>
 
@@ -124,23 +109,21 @@ const SAVE_KEY='flybreeder_save';
 const state={flies:[],selected:[],nextId:1,gen:1,total:0};
 const arena=document.getElementById('arena');
 
-function makeFly(speciesId){
-  const sp=SPECIES.find(s=>s.id===speciesId);
+function makeFly(sid){
+  const sp=SPECIES.find(s=>s.id===sid);
   const id=state.nextId++;
-  return{id,nickname:null,speciesId:sp.id,emoji:sp.emoji,
-    defaultName:sp.name+'#'+id,
+  return{id,nickname:null,speciesId:sid,emoji:sp.emoji,defaultName:sp.name+'#'+id,
     hunger:0,sleepy:false,age:0,
     x:10+Math.random()*75,y:10+Math.random()*75,
     vx:(Math.random()-0.5)*2,vy:(Math.random()-0.5)*2,sp};
 }
-function displayName(f){return f.nickname||f.defaultName}
+function dn(f){return f.nickname||f.defaultName}
 
-function addFly(speciesId){
+function addFly(sid){
   if(state.flies.length>=20){log('飼育上限は20匹！');return;}
-  const f=makeFly(speciesId);
-  state.flies.push(f);state.total++;
-  renderFly(f);
-  log('✨ '+displayName(f)+'（'+SPECIES.find(s=>s.id===speciesId).desc+'）追加！');
+  const f=makeFly(sid);
+  state.flies.push(f);state.total++;renderFly(f);
+  log('✨ '+dn(f)+'（'+SPECIES.find(s=>s.id===sid).desc+'）追加！');
   updateUI();
 }
 
@@ -149,27 +132,28 @@ function renderFly(f){
   el.className='fly-el';el.id='fly-'+f.id;
   el.style.left=f.x+'%';el.style.top=f.y+'%';
   if(f.sleepy)el.style.opacity='0.6';
-  el.innerHTML=`<span class="fly-icon">${f.sleepy?'💤':f.emoji}</span><span class="fly-name" id="fname-${f.id}">${displayName(f)}</span><div class="hunger-bar-wrap"><div class="hunger-bar" id="hbar-${f.id}" style="width:${f.hunger}%;background:#97C459"></div></div>`;
+  el.innerHTML=`<span class="fi">${f.sleepy?'💤':f.emoji}</span><span class="fly-name" id="fn-${f.id}">${dn(f)}</span><div class="hunger-bar-wrap"><div class="hunger-bar" id="hb-${f.id}" style="width:${f.hunger}%;background:#97C459"></div></div>`;
   if(state.selected.includes(f.id)){el.style.outline='2px solid #97C459';el.style.borderRadius='4px';}
-  el.addEventListener('pointerdown',e=>{e.stopPropagation();selectFly(f.id);});
+  el.addEventListener('touchend',e=>{e.preventDefault();selectFly(f.id);},{passive:false});
+  el.addEventListener('click',()=>selectFly(f.id));
   arena.appendChild(el);
 }
 
-function getFlyEl(id){return document.getElementById('fly-'+id)}
+function ge(id){return document.getElementById('fly-'+id)}
 
 function selectFly(id){
   const f=state.flies.find(f=>f.id===id);if(!f)return;
   const idx=state.selected.indexOf(id);
   if(idx>=0){
     state.selected.splice(idx,1);
-    const el=getFlyEl(id);if(el){el.style.outline='';el.style.borderRadius='';}
+    const el=ge(id);if(el){el.style.outline='';el.style.borderRadius='';}
   } else {
     if(state.selected.length>=2){
       const old=state.selected.shift();
-      const oel=getFlyEl(old);if(oel){oel.style.outline='';oel.style.borderRadius='';}
+      const oel=ge(old);if(oel){oel.style.outline='';oel.style.borderRadius='';}
     }
     state.selected.push(id);
-    const el=getFlyEl(id);if(el){el.style.outline='2px solid #97C459';el.style.borderRadius='4px';}
+    const el=ge(id);if(el){el.style.outline='2px solid #97C459';el.style.borderRadius='4px';}
   }
   updateSelInfo();updateUI();
 }
@@ -184,56 +168,54 @@ function updateSelInfo(){
   }
   const lines=state.selected.map(id=>{
     const f=state.flies.find(f=>f.id===id);if(!f)return '';
-    const hpct=f.hunger;
-    const hcol=hpct>80?'#E24B4A':hpct>50?'#EF9F27':'#97C459';
-    const status=f.sleepy?'💤 熟睡中':(hpct>80?'😵 満腹':hpct>50?'😋 食べ中':'😐 空腹');
-    return `<b>${f.emoji}${displayName(f)}</b>　<span style="color:${hcol}">${Math.round(hpct)}%</span>　${status}`;
+    const h=f.hunger,hc=h>80?'#E24B4A':h>50?'#EF9F27':'#97C459';
+    const st=f.sleepy?'💤 熟睡中':(h>80?'😵 満腹':h>50?'😋 食べ中':'😐 空腹');
+    return `<b>${f.emoji}${dn(f)}</b>　<span style="color:${hc}">${Math.round(h)}%</span>　${st}`;
   });
   infoDiv.style.color='#e8e6dd';
   infoDiv.innerHTML=lines.join('<br>');
-  const lastId=state.selected[state.selected.length-1];
-  const lastFly=state.flies.find(f=>f.id===lastId);
-  if(lastFly){
-    document.getElementById('rename-label').textContent=lastFly.emoji+' '+displayName(lastFly)+' の名前を変更';
+  const lastF=state.flies.find(f=>f.id===state.selected[state.selected.length-1]);
+  if(lastF){
+    document.getElementById('rename-label').textContent=lastF.emoji+' '+dn(lastF)+' の名前を変更';
     const inp=document.getElementById('nickname-input');
-    inp.value=lastFly.nickname||'';
+    if(document.activeElement!==inp)inp.value=lastF.nickname||'';
     renameArea.classList.add('visible');
   }
 }
 
-document.getElementById('nickname-btn').addEventListener('click',()=>{
-  if(state.selected.length===0)return;
+document.getElementById('nickname-btn').addEventListener('click',function(e){
+  e.stopPropagation();
   const lastId=state.selected[state.selected.length-1];
-  const lastFly=state.flies.find(f=>f.id===lastId);if(!lastFly)return;
+  const lastF=state.flies.find(f=>f.id===lastId);if(!lastF)return;
   const val=document.getElementById('nickname-input').value.trim();
   if(!val){log('名前を入力してね！');return;}
-  const old=displayName(lastFly);
-  lastFly.nickname=val;
-  const nameEl=document.getElementById('fname-'+lastFly.id);
-  if(nameEl)nameEl.textContent=val;
+  const old=dn(lastF);
+  lastF.nickname=val;
+  const nel=document.getElementById('fn-'+lastF.id);if(nel)nel.textContent=val;
   log('✏️ '+old+' → 「'+val+'」に改名！');
-  document.getElementById('nickname-input').blur();
   updateSelInfo();
 });
 document.getElementById('nickname-input').addEventListener('keydown',e=>{
   if(e.key==='Enter'){e.preventDefault();document.getElementById('nickname-btn').click();}
 });
+document.getElementById('nickname-input').addEventListener('touchstart',e=>e.stopPropagation(),{passive:true});
+document.getElementById('nickname-input').addEventListener('touchend',e=>e.stopPropagation(),{passive:true});
 
 function feedFly(food){
-  if(state.selected.length===0){log('先にハエを選択してね！');return;}
+  if(!state.selected.length){log('先にハエを選択してね！');return;}
   state.selected.forEach(id=>{
     const f=state.flies.find(f=>f.id===id);if(!f)return;
-    if(f.sleepy){log(displayName(f)+'は寝てて食べられない…');return;}
-    const before=f.hunger;
+    if(f.sleepy){log(dn(f)+'は寝てて食べられない…');return;}
+    const bef=f.hunger;
     f.hunger=Math.min(100,f.hunger+food.fill*f.sp.hungry*0.8);
     if(f.hunger>=100){
       f.hunger=100;f.sleepy=true;
-      log('😴 '+displayName(f)+'、お腹いっぱいで寝落ち！');
-      const el=getFlyEl(id);if(el){el.querySelector('.fly-icon').textContent='💤';el.style.opacity='0.6';}
+      log('😴 '+dn(f)+'、お腹いっぱいで寝落ち！');
+      const el=ge(id);if(el){el.querySelector('.fi').textContent='💤';el.style.opacity='0.6';}
     } else {
-      log(f.emoji+' '+displayName(f)+'に'+food.emoji+food.name+'！ ('+Math.round(before)+'→'+Math.round(f.hunger)+'%)');
+      log(f.emoji+' '+dn(f)+'に'+food.emoji+food.name+'！('+Math.round(bef)+'→'+Math.round(f.hunger)+'%)');
     }
-    const bar=document.getElementById('hbar-'+id);
+    const bar=document.getElementById('hb-'+id);
     if(bar){bar.style.width=f.hunger+'%';bar.style.background=f.hunger>80?'#E24B4A':f.hunger>50?'#EF9F27':'#97C459';}
   });
   updateSelInfo();
@@ -241,18 +223,16 @@ function feedFly(food){
 
 function breedFlies(){
   if(state.selected.length<2)return;
-  const [id1,id2]=state.selected;
-  const f1=state.flies.find(f=>f.id===id1),f2=state.flies.find(f=>f.id===id2);
-  if(!f1||!f2)return;
-  if(f1.sleepy||f2.sleepy){log('寝てる子は交配できない…');return;}
+  const f1=state.flies.find(f=>f.id===state.selected[0]);
+  const f2=state.flies.find(f=>f.id===state.selected[1]);
+  if(!f1||!f2||f1.sleepy||f2.sleepy){log('寝てる子は交配できない…');return;}
   state.gen++;
   const child=makeFly(Math.random()<0.5?f1.speciesId:f2.speciesId);
   child.defaultName=child.defaultName.replace('#','G'+state.gen+'#');
-  state.flies.push(child);state.total++;
-  renderFly(child);
-  state.selected.forEach(id=>{const el=getFlyEl(id);if(el){el.style.outline='';el.style.borderRadius='';}});
+  state.flies.push(child);state.total++;renderFly(child);
+  state.selected.forEach(id=>{const el=ge(id);if(el){el.style.outline='';el.style.borderRadius='';}});
   state.selected.length=0;
-  log('💞 '+displayName(f1)+'×'+displayName(f2)+'→'+child.emoji+displayName(child)+' 誕生！第'+state.gen+'世代');
+  log('💞 '+dn(f1)+'×'+dn(f2)+'→'+child.emoji+dn(child)+' 誕生！第'+state.gen+'世代');
   updateSelInfo();updateUI();
 }
 
@@ -273,7 +253,7 @@ function loadGame(){
     const raw=localStorage.getItem(SAVE_KEY);
     if(!raw){log('📂 セーブデータがないよ！');return;}
     const data=JSON.parse(raw);
-    state.flies.forEach(f=>{const el=getFlyEl(f.id);if(el)el.remove();});
+    state.flies.forEach(f=>{const el=ge(f.id);if(el)el.remove();});
     state.flies.length=0;state.selected.length=0;
     state.gen=data.gen||1;state.nextId=data.nextId||1;state.total=data.total||0;
     data.flies.forEach(fd=>{
@@ -293,8 +273,8 @@ function loadGame(){
 
 function checkSaveExists(){
   try{const raw=localStorage.getItem(SAVE_KEY);
-    if(raw){const data=JSON.parse(raw);
-      document.getElementById('save-status').textContent='💾 '+data.savedAt+' のデータあり';}}
+    if(raw){const d=JSON.parse(raw);
+      document.getElementById('save-status').textContent='💾 '+d.savedAt+' のデータあり';}}
   catch(e){}
 }
 
@@ -305,9 +285,8 @@ function tick(){
       f.hunger=Math.max(0,f.hunger-1.5);
       if(f.hunger<=40){
         f.sleepy=false;
-        const el=getFlyEl(f.id);
-        if(el){el.querySelector('.fly-icon').textContent=f.emoji;el.style.opacity='1';}
-        log('☀️ '+displayName(f)+' 起きた！');
+        const el=ge(f.id);if(el){el.querySelector('.fi').textContent=f.emoji;el.style.opacity='1';}
+        log('☀️ '+dn(f)+' 起きた！');
       }
       return;
     }
@@ -318,14 +297,14 @@ function tick(){
     f.x+=f.vx*sp;f.y+=f.vy*sp;
     if(f.x<2){f.x=2;f.vx=Math.abs(f.vx);}if(f.x>90){f.x=90;f.vx=-Math.abs(f.vx);}
     if(f.y<2){f.y=2;f.vy=Math.abs(f.vy);}if(f.y>85){f.y=85;f.vy=-Math.abs(f.vy);}
-    const el=getFlyEl(f.id);
+    const el=ge(f.id);
     if(el){
       el.style.left=f.x+'%';el.style.top=f.y+'%';
-      const bar=document.getElementById('hbar-'+f.id);
+      const bar=document.getElementById('hb-'+f.id);
       if(bar){bar.style.width=f.hunger+'%';bar.style.background=f.hunger>80?'#E24B4A':f.hunger>50?'#EF9F27':'#97C459';}
     }
   });
-  if(state.selected.length>0)updateSelInfo();
+  if(state.selected.length)updateSelInfo();
 }
 
 function updateUI(){
@@ -333,7 +312,6 @@ function updateUI(){
   document.getElementById('s-gen').textContent=state.gen;
   document.getElementById('btn-breed').disabled=state.selected.length<2;
 }
-
 function log(msg){
   const d=document.createElement('div');d.className='log-entry';d.textContent='▶ '+msg;
   document.getElementById('log').prepend(d);
@@ -342,13 +320,13 @@ function log(msg){
 
 const sg=document.getElementById('species-grid');
 SPECIES.forEach(sp=>{
-  const b=document.createElement('button');b.className='sp-btn';
+  const b=document.createElement('button');b.className='sp-btn';b.type='button';
   b.innerHTML=sp.emoji+' '+sp.name+'<br><span style="font-size:10px;color:#5f5e5a">'+sp.desc+'</span>';
   b.addEventListener('click',()=>addFly(sp.id));sg.appendChild(b);
 });
 const fg=document.getElementById('food-grid');
 FOODS.forEach(food=>{
-  const b=document.createElement('button');b.className='food-btn';
+  const b=document.createElement('button');b.className='food-btn';b.type='button';
   b.innerHTML=food.emoji+' '+food.name+' <span style="font-size:10px;color:#5f5e5a">'+food.label+'</span>';
   b.addEventListener('click',()=>feedFly(food));fg.appendChild(b);
 });
@@ -357,12 +335,12 @@ document.getElementById('btn-breed').addEventListener('click',breedFlies);
 document.getElementById('btn-save').addEventListener('click',saveGame);
 document.getElementById('btn-load').addEventListener('click',loadGame);
 document.getElementById('btn-remove').addEventListener('click',()=>{
-  state.selected.forEach(id=>{const el=getFlyEl(id);if(el){el.style.outline='';el.style.borderRadius='';}});
+  state.selected.forEach(id=>{const el=ge(id);if(el){el.style.outline='';el.style.borderRadius='';}});
   state.selected.length=0;updateSelInfo();updateUI();
 });
 document.getElementById('btn-reset').addEventListener('click',()=>{
   if(!confirm('全リセットしていいですか？'))return;
-  state.flies.forEach(f=>{const el=getFlyEl(f.id);if(el)el.remove();});
+  state.flies.forEach(f=>{const el=ge(f.id);if(el)el.remove();});
   state.flies.length=0;state.selected.length=0;state.nextId=1;state.gen=1;state.total=0;
   document.getElementById('sel-info').innerHTML='← ハエをタップして選択';
   document.getElementById('rename-area').classList.remove('visible');
